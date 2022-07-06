@@ -50,7 +50,7 @@ func main() {
 
 	http.HandleFunc("/healthcheck", healthCheckHandler)
 	http.HandleFunc("/", secretHandler)
-	err := http.ListenAndServe(":3333", nil)
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatalf("Error: %s", err)
 		return
